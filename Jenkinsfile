@@ -7,12 +7,6 @@ podTemplate(
       args: '99d'
     )
   ],
-  volumes: [
-    emptyDirVolume(mountPath: '/workspace', memory: false)
-  ],
-  imagePullSecrets: ['dockercred'],
-  namespace: 'jenkins',
-  serviceAccount: 'jenkins'
 ) {
   node(POD_LABEL) {
 
@@ -22,16 +16,17 @@ podTemplate(
       }
     }
 
-    stage('Build and Push to DockerHub') {
+    stage('Build Docker Image') {
       container('kaniko') {
         sh '''
-          echo "=== Starting Kaniko Docker build and push ==="
+          echo "=== Starting Kaniko Docker build ==="
           /kaniko/executor \
             --context `pwd` \
             --dockerfile `pwd`/Dockerfile \
             --destination loukman50/hextris:latest \
+            --no-push \
             --verbosity=info
-          echo "=== Docker build and push completed ==="
+          echo "=== Docker build completed ==="
         '''
       }
     }
