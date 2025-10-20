@@ -1,0 +1,8 @@
+apiVersion: v2
+name: hextris
+description: A Helm chart for deploying the Hextris static web app served by nginx
+type: application
+version: 0.1.0
+appVersion: "1.0.0"
+maintainers:
+  - name: Loukmane

@@ -1,0 +1,144 @@
+# ================================
+# IDE and Editor Files
+# ================================
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# ================================
+# Terraform Files
+# ================================
+# Terraform state files
+*.tfstate
+*.tfstate.*
+*.tfstate.backup
+
+# Terraform variable files (may contain secrets)
+*.tfvars
+*.auto.tfvars
+
+# Terraform plans
+*.tfplan
+
+# Terraform directories
+.terraform/
+.terraform.lock.hcl
+
+# Crash log files
+crash.log
+crash.*.log
+
+# ================================
+# Docker Files
+# ================================
+# Docker build context files
+.dockerignore
+
+# ================================
+# Kubernetes Files
+# ================================
+# Helm chart dependencies
+helm/*/charts/
+helm/*/Chart.lock
+
+# Kubernetes secret files
+*-secret.yaml
+*-secret.yml
+
+# ================================
+# AWS and Cloud Files
+# ================================
+# AWS credentials
+.aws/
+aws-credentials.txt
+
+# Cloud provider configs
+.gcloud/
+.azure/
+
+# ================================
+# CI/CD Files
+# ================================
+# Jenkins workspace
+.jenkins/
+jenkins-workspace/
+
+# Build artifacts
+build/
+dist/
+target/
+
+# ================================
+# Logs and Temporary Files
+# ================================
+# Log files
+*.log
+logs/
+
+# Temporary files
+tmp/
+temp/
+.tmp/
+
+# Cache directories
+.cache/
+.npm/
+node_modules/
+
+# ================================
+# Security and Secrets
+# ================================
+# Environment files with secrets
+.env
+.env.local
+.env.*.local
+
+# Private keys
+*.pem
+*.key
+*.p12
+*.pfx
+
+# Certificate files
+*.crt
+*.cer
+
+# SSH keys
+id_rsa
+id_ed25519
+authorized_keys
+
+# ================================
+# OS Generated Files
+# ================================
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+
+# Linux
+*~
+.fuse_hidden*
+.nfs*
+
+# ================================
+# Application Specific
+# ================================
+# Hextris game scores/saves (if any)
+app/hextris/scores.json
+app/hextris/save.json
+
+# Backup files
+*.bak
+*.backup
