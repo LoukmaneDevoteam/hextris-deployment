@@ -66,6 +66,7 @@ aws-credentials.txt
 # Jenkins workspace
 .jenkins/
 jenkins-workspace/
+jenkins-prep/
 
 # Build artifacts
 build/
